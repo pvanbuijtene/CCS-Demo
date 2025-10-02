@@ -52,6 +52,24 @@ const FRUIT_FACTS = {
       "Supports skin health"
     ],
     season: "Peak season from November to March"
+  },
+  avocado: {
+    nutrition: {
+      calories: "320 kcal",
+      fiber: "14g",
+      healthy_fats: "29g"
+    },
+    facts: [
+      "Avocados are technically a fruit, not a vegetable",
+      "They contain more potassium than bananas",
+      "Avocados can take up to 18 months to ripen on the tree"
+    ],
+    benefits: [
+      "Rich in heart-healthy monounsaturated fats",
+      "Supports brain health and cognitive function",
+      "Helps absorb fat-soluble vitamins"
+    ],
+    season: "Available year-round with peak from spring to fall"
   }
 };
 
@@ -80,6 +98,11 @@ function createFactsSection(fruit) {
             <div class="nutrition-item">
               <span class="nutrition-value">${facts.nutrition.vitamin_c}</span>
               <span class="nutrition-label">Vitamin C</span>
+            </div>
+          ` : facts.nutrition.healthy_fats ? `
+            <div class="nutrition-item">
+              <span class="nutrition-value">${facts.nutrition.healthy_fats}</span>
+              <span class="nutrition-label">Healthy Fats</span>
             </div>
           ` : `
             <div class="nutrition-item">
